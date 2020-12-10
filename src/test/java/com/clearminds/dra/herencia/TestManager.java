@@ -10,7 +10,7 @@ public class TestManager {
 		
 		PersonaManager persona;
 		try {
-			persona = new PersonaManager("com.clearminds.model.ServicioPersonaBDD");
+			persona = new PersonaManager("archivoDaniel");
 			persona.insertarPersona(new Persona("Daniel", "Ramírez", "La Vicentina"));
 		} catch (InstanceException e) {
 			e.printStackTrace();
