@@ -6,5 +6,9 @@ public class Persona {
 	private String apellidos;
 	private String direccion;
 	
+	@Override
+	public String toString() {
+		return "Persona [nombres=" + nombres + ", apellidos=" + apellidos + ", direccion=" + direccion + "]";
+	}
 	
 }
