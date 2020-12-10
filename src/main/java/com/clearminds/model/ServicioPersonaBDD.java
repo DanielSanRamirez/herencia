@@ -1,5 +1,7 @@
 package com.clearminds.model;
 
+import com.clearminds.interfaces.ServicioPersona;
+
 public class ServicioPersonaBDD implements ServicioPersona{
 
 	public boolean insertar(Persona persona) {
