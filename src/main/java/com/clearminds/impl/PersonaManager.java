@@ -19,21 +19,14 @@ public class PersonaManager {
 
 		try {
 			String nombre = leerPropiedad(nombrePropiedad);
+			
 			if (nombre != null) {
 				clase = Class.forName(nombre);
-				try {
-					serv = (ServicioPersona) clase.newInstance();
-				} catch (InstantiationException e) {
-					e.printStackTrace();
-					throw new InstanceException("Error al obtener una instancia de Servicio Persona");
-				} catch (IllegalAccessException e) {
-					e.printStackTrace();
-					throw new InstanceException("Error al obtener una instancia de Servicio Persona");
-				}	
+				serv = (ServicioPersona) clase.newInstance();	
 			} else {
 				throw new InstanceException("Error al obtener una instancia de Servicio Persona");
 			}
-		} catch (ClassNotFoundException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			throw new InstanceException("Error al obtener una instancia de Servicio Persona");
 		}
